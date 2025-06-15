@@ -1,0 +1,66 @@
+#Even or Odd Checker:
+ Take an integer as input and print whether it's even or odd.
+ 
+ n = int(input("Enter: "))
+ result = ["Even", "Odd"]  
+ def even_odd(n,result):
+     print("The number is", result[n % 2])
+ even_odd(n,result)
+ 
+
+#Sum of Digits:
+ Given a number, find the sum of its digits (e.g., 123 ➝ 6).
+ 
+ def sum_of_digit(num):
+    sum=0
+    for i in num:
+        sum+=i
+    return(sum)
+ num = list(map(int, input("Enter: ").split()))
+ print(sum_of_digit(num))
+
+#Count Vowels in a String:
+ Input a string and count how many vowels it contains.
+ 
+ def vowel_count(s):
+    count=0
+    vowels=["a","e","i","o","u"]
+    for i in s.lower():
+        if i in vowels:
+            count+=1
+    return(count)
+ s=input()
+ print(vowel_count(s))
+
+#Check Palindrome:
+ Check if a given string or number is a palindrome (same forward and backward).
+
+ inp=input()
+ f=0 
+ l=len(inp)-1
+ pal=True
+ for i in inp:
+     if(inp[f]!=inp[l]):
+         pal=False 
+         break 
+     else:
+         f+=1 
+         l-=1 
+ if(pal):
+     print("palindrome")
+ else:
+     print("Not a palindrome")
+
+#Find Maximum in a List:
+ Given a list of numbers, find and print the maximum number.
+
+def max_num(num):
+    max=0
+    while num>0:
+        digit= num%10 
+        if digit>max:
+            max=digit
+        num//=10
+    return(max)
+num=int(input())
+print(max_num(num))
